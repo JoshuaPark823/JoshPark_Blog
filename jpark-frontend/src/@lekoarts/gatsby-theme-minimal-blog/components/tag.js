@@ -37,8 +37,6 @@ import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replac
 const Tag = ({ posts, pageContext }) => {
   const { tagsPath, basePath } = useMinimalBlogConfig(); // Enable if linking to the "Tags" page
 
-  const tags = usePostTags();
-
   return (
     <Layout>
       <SEO title={`Tag: ${pageContext.name}`} />
@@ -58,10 +56,6 @@ const Tag = ({ posts, pageContext }) => {
           View all tags
         </Styled.a>
       </Flex>
-
-      {/* Render list of tags */}
-      {/* <TagsList list={tags} /> */}
-      {/* */}
 
       <Listing posts={posts} sx={{ mt: [4, 5] }} />
     </Layout>
