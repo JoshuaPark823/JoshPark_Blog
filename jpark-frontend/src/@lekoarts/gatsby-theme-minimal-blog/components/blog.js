@@ -2,11 +2,9 @@
 import { jsx, Styled } from "theme-ui";
 import { Flex } from "@theme-ui/components";
 import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout";
-import ListingByYear from "./listing-by-year";
 import Listing from '@lekoarts/gatsby-theme-minimal-blog/src/components/listing';
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo";
 import usePostTags from "../../../hooks/use-post-tags";
-import TagsList from "./tags-list";
 
 // Enable if linking to the "Tags" page
 import { Link } from "gatsby";
@@ -32,8 +30,6 @@ import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replac
 const Blog = ({ posts }) => {
   const { tagsPath, basePath } = useMinimalBlogConfig(); // Enable if linking to the "Tags" page
 
-  const tags = usePostTags();
-
   return (
     <Layout>
       <SEO title="Blog" />
@@ -41,7 +37,8 @@ const Blog = ({ posts }) => {
         sx={{
           alignItems: `center`,
           justifyContent: `space-between`,
-          flexFlow: `wrap`
+          flexFlow: `wrap`,
+          'margin-bottom': '3em'
         }}
       >
         <Styled.h2>Blog</Styled.h2>
