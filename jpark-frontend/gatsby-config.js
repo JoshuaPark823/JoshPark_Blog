@@ -18,7 +18,7 @@ module.exports = {
         tagsPath: "/blog/tags",
         navigation: [
           {
-            title: `Development`,
+            title: `Blog`,
             slug: `/blog`
           },
           {
