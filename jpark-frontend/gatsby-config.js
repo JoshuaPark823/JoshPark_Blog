@@ -15,6 +15,7 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
+        remarkPlugins: [require("remark-math")],
         tagsPath: "/blog/tags",
         navigation: [
           {
@@ -42,6 +43,12 @@ module.exports = {
         ]
       }
     },
+    // {
+    //     resolve: "gatsby-plugin-mdx",
+    //     options: {
+    //         remarkPlugins: [require("remark-math")],
+    //     },
+    // },
     // Add your GA ID and enable this if you are using Google Analytics
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
